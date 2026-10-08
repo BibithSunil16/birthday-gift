@@ -1,0 +1,897 @@
+/* ============================================
+   BIRTHDAY GIFT WEBSITE v2 — Styles
+   ============================================ */
+
+/* ---------- RESET & BASE ---------- */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #1a1a2e;
+}
+
+/* ---------- PAGE SYSTEM ---------- */
+.page {
+  display: none;
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  animation: pageFadeIn 0.6s ease;
+}
+
+.page.active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.page-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.page-nav {
+  padding: 1rem 2rem 2rem;
+  text-align: center;
+}
+
+/* ---------- SHARED ---------- */
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  padding-top: 2rem;
+  color: #6b3fa0;
+}
+
+.section-desc {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.btn-next {
+  display: inline-block;
+  padding: 8px 26px;
+  border: 2px solid currentColor;
+  border-radius: 50px;
+  background: transparent;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  opacity: 0.55;
+  cursor: pointer;
+  transition: opacity 0.3s, transform 0.2s;
+}
+
+.btn-next:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* ============================================
+   PAGE 1 — COUNTDOWN & REVEAL
+   ============================================ */
+#page-1 {
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.countdown-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.countdown-number {
+  font-size: 8rem;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0 0 40px rgba(255,255,255,0.3);
+  opacity: 0;
+  transform: scale(0.3);
+  transition: none;
+  user-select: none;
+}
+
+.countdown-number.show {
+  animation: countPop 0.8s ease forwards;
+}
+
+@keyframes countPop {
+  0%   { opacity: 0; transform: scale(0.3) rotate(-10deg); }
+  30%  { opacity: 1; transform: scale(1.4) rotate(5deg); }
+  60%  { opacity: 1; transform: scale(1.1) rotate(0deg); }
+  100% { opacity: 0; transform: scale(0.5) rotate(10deg); }
+}
+
+.reveal-text {
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.5);
+  pointer-events: none;
+}
+
+.reveal-text.show {
+  animation: revealPop 1s ease forwards;
+}
+
+@keyframes revealPop {
+  0%   { opacity: 0; transform: scale(0.5); }
+  60%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.reveal-text h1 {
+  font-size: 3.5rem;
+  color: #ffd700;
+  text-shadow: 0 0 30px rgba(255,215,0,0.5);
+  margin-bottom: 1rem;
+}
+
+.reveal-text p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+/* ============================================
+   PAGE 2 — YES / NO (Runaway Button)
+   ============================================ */
+#page-2 {
+  background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fbc2eb);
+}
+
+.page-2-question {
+  font-size: 2.5rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+  margin-bottom: 3rem;
+  animation: pulseText 2s ease-in-out infinite;
+}
+
+@keyframes pulseText {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.03); }
+}
+
+.yes-no-buttons {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  min-height: 70px;
+  width: 100%;
+}
+
+.btn-yes {
+  padding: 20px 60px;
+  background: linear-gradient(135deg, #00b894, #00cec9);
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 800;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 8px 30px rgba(0,184,148,0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
+  z-index: 2;
+  flex-shrink: 0;
+}
+
+.btn-yes:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 12px 40px rgba(0,184,148,0.6);
+}
+
+.btn-no {
+  position: fixed;
+  padding: 12px 28px;
+  background: #e17055;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(225,112,85,0.4);
+  transition: left 0.15s ease, top 0.15s ease;
+  z-index: 3;
+  user-select: none;
+  touch-action: none;
+  width: auto;
+}
+
+.btn-no:active {
+  transform: scale(0.9);
+}
+
+.runaway-message {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 600;
+  min-height: 2rem;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+}
+
+.runaway-counter {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.7);
+}
+
+/* ============================================
+   PAGE 3 — HAPPY BIRTHDAY
+   ============================================ */
+#page-3 {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  overflow: hidden;
+  position: relative;
+}
+
+.birthday-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Floating emoji / balloon animation */
+.birthday-bg::before,
+.birthday-bg::after,
+#page-3 .float-emoji {
+  position: absolute;
+  font-size: 2.5rem;
+  animation: floatAround 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.birthday-bg::before { content: '🎈'; left: 5%; top: 10%; animation-delay: 0s; font-size: 3rem; }
+.birthday-bg::after  { content: '🎉'; right: 8%; top: 20%; animation-delay: 2s; }
+
+@keyframes floatAround {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%      { transform: translateY(-30px) rotate(10deg); }
+  50%      { transform: translateY(-60px) rotate(-5deg); }
+  75%      { transform: translateY(-20px) rotate(5deg); }
+}
+
+/* Additional floating elements generated by JS will use this class */
+.float-item {
+  position: absolute;
+  font-size: 2rem;
+  animation: floatAround 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.birthday-title {
+  font-size: 3.5rem;
+  color: #fff;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+  animation: bounceIn 1.2s ease;
+}
+
+@keyframes bounceIn {
+  0%   { opacity: 0; transform: scale(0.3); }
+  50%  { opacity: 1; transform: scale(1.1); }
+  70%  { transform: scale(0.95); }
+  100% { transform: scale(1); }
+}
+
+.birthday-subtitle {
+  font-size: 1.3rem;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 0.8rem;
+}
+
+.birthday-joke {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.6);
+  font-style: italic;
+  margin-bottom: 2rem;
+}
+
+/* ============================================
+   PAGE 4 — CAROUSEL (Best Moments)
+   ============================================ */
+#page-4 {
+  background: linear-gradient(180deg, #f5f7fa, #c3cfe2);
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.carousel-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  gap: 1.5rem;
+}
+
+.carousel-img {
+  width: 100%;
+  max-width: 700px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+  animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.carousel-caption {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+  min-height: 3rem;
+  font-weight: 500;
+}
+
+.carousel-image-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+  line-height: 0;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  width: 48px;
+  height: 80px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 2;
+  transition: background 0.3s, transform 0.2s;
+  line-height: 80px;
+  text-align: center;
+  padding: 0;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(-50%) scale(1.08);
+}
+
+.carousel-arrow-left {
+  left: 10px;
+}
+
+.carousel-arrow-right {
+  right: 10px;
+}
+
+.carousel-counter-overlay {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  z-index: 2;
+  line-height: 1.5;
+}
+
+.gallery-track {
+  display: none;
+}
+
+.gallery-track::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery-track::-webkit-scrollbar-track {
+  background: #e8eaf6;
+  border-radius: 4px;
+}
+
+.gallery-track::-webkit-scrollbar-thumb {
+  background: #6b3fa0;
+  border-radius: 4px;
+}
+
+.gallery-card {
+  flex: 0 0 280px;
+  scroll-snap-align: center;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.gallery-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+}
+
+.gallery-card-img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #f0f0f0;
+}
+
+.gallery-card-info {
+  padding: 1rem 1.2rem 1.2rem;
+}
+
+.gallery-card-emoji {
+  font-size: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.gallery-card-date {
+  font-size: 0.85rem;
+  color: #6b3fa0;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+
+.gallery-card-caption {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ============================================
+   PAGE 5 — PUZZLE GAME
+   ============================================ */
+#page-5 {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+#page-5 .section-title,
+#page-5 .section-desc {
+  color: #fff;
+}
+
+.puzzle-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.quiz-container {
+  background: rgba(255,255,255,0.95);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 0 1rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.quiz-question {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.quiz-option {
+  padding: 14px 20px;
+  background: #f5f5f5;
+  border: 2px solid #e0e0e0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #444;
+  text-align: left;
+  transition: all 0.3s;
+}
+
+.quiz-option:hover {
+  background: #e8e8ff;
+  border-color: #6b3fa0;
+}
+
+.quiz-option.correct {
+  background: #d4edda;
+  border-color: #28a745;
+  color: #155724;
+}
+
+.quiz-option.wrong {
+  background: #f8d7da;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.quiz-option.disabled {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.quiz-result {
+  margin-top: 1.5rem;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ============================================
+   PAGE 5.5 — TRANSITION MESSAGE
+   ============================================ */
+#page-5-5 {
+  background: linear-gradient(135deg, #a8edea, #fed6e3);
+}
+
+.message-title {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 1rem;
+  animation: bounceIn 1s ease;
+}
+
+.message-text {
+  font-size: 1.3rem;
+  color: #555;
+  line-height: 1.8;
+  font-weight: 500;
+}
+
+/* ============================================
+   PAGE 6 — CAROUSEL (More Moments)
+   ============================================ */
+#page-6 {
+  background: linear-gradient(180deg, #e8eaf6, #f3e5f5);
+  justify-content: flex-start;
+  padding-top: 2rem;
+}
+
+.puzzle-board {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  background: #333;
+  padding: 10px;
+  border-radius: 16px;
+  margin: 0 auto 2rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.puzzle-piece {
+  cursor: grab;
+  aspect-ratio: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s;
+  background-size: 300% 300%;
+  background-position: center;
+}
+
+.puzzle-piece:hover {
+  transform: scale(1.05);
+}
+
+.puzzle-piece.active {
+  box-shadow: 0 4px 12px rgba(107,63,160,0.5);
+}
+
+/* Celebration button for puzzle completion stays prominent */
+#puzzle-complete-btn {
+  border-color: transparent;
+  background: linear-gradient(135deg, #6b3fa0, #a18cd1);
+  color: #fff;
+  opacity: 1;
+}
+
+.puzzle-counter {
+  text-align: center;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 1rem;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.collage-grid {
+  display: none;
+}
+
+.collage-item {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.collage-item:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.collage-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+.collage-item:nth-child(4) { grid-column: span 2; }
+.collage-item:nth-child(7) { grid-column: span 2; grid-row: span 2; }
+
+.collage-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.collage-item .collage-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  color: #fff;
+  font-size: 0.8rem;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.collage-item:hover .collage-label {
+  opacity: 1;
+}
+
+/* ============================================
+   PAGE 7 — FINAL MESSAGE
+   ============================================ */
+#page-7 {
+  background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+}
+
+.final-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.final-bg::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 50% 50%, rgba(255,215,0,0.08) 0%, transparent 50%);
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { transform: scale(1); opacity: 0.5; }
+  50%      { transform: scale(1.2); opacity: 1; }
+}
+
+.final-card {
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 24px;
+  padding: 3rem 2.5rem;
+  max-width: 550px;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.final-title {
+  font-size: 2.5rem;
+  color: #ffd700;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 20px rgba(255,215,0,0.3);
+}
+
+.final-message {
+  font-size: 1.15rem;
+  color: #ddd;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.final-signoff {
+  font-size: 1.1rem;
+  color: #aaa;
+  line-height: 1.6;
+}
+
+.final-signoff span {
+  color: #f5576c;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* ============================================
+   LIGHTBOX
+   ============================================ */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  animation: lightboxIn 0.3s ease;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+@keyframes lightboxIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.5);
+  animation: scaleIn 0.3s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to   { transform: scale(1); opacity: 1; }
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  font-size: 3rem;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s;
+  line-height: 1;
+  z-index: 10001;
+}
+
+.lightbox-close:hover {
+  transform: scale(1.2);
+}
+
+/* ============================================
+   CONFETTI CANVAS
+   ============================================ */
+#confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .reveal-text h1 { font-size: 2.5rem; }
+  .countdown-number { font-size: 6rem; }
+
+  .page-2-question { font-size: 1.8rem; }
+  .btn-yes { padding: 16px 40px; font-size: 1.3rem; }
+  .btn-no { padding: 10px 22px; font-size: 0.9rem; }
+
+  .birthday-title { font-size: 2.5rem; }
+
+  .section-title { font-size: 1.8rem; }
+
+  .gallery-card { flex: 0 0 240px; }
+  .gallery-card-img { height: 180px; }
+
+  .quiz-container { padding: 1.5rem; }
+  .quiz-question { font-size: 1rem; }
+
+  .collage-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+  .collage-item:nth-child(1) { grid-column: span 2; grid-row: span 2; }
+  .collage-item:nth-child(4) { grid-column: span 2; }
+  .collage-item:nth-child(7) { grid-column: span 2; grid-row: span 2; }
+
+  .final-title { font-size: 2rem; }
+  .final-card { padding: 2rem 1.5rem; }
+}
+
+@media (max-width: 480px) {
+  .reveal-text h1 { font-size: 2rem; }
+  .countdown-number { font-size: 4rem; }
+
+  .page-2-question { font-size: 1.5rem; }
+  .btn-yes { padding: 14px 32px; font-size: 1.1rem; }
+  .btn-no { padding: 8px 18px; font-size: 0.8rem; }
+
+  .birthday-title { font-size: 2rem; }
+
+  .gallery-card { flex: 0 0 200px; }
+  .gallery-card-img { height: 150px; }
+
+  .collage-grid { grid-template-columns: 1fr 1fr; gap: 6px; }
+  .collage-item:nth-child(1) { grid-column: span 2; grid-row: span 1; }
+  .collage-item:nth-child(7) { grid-column: span 2; grid-row: span 1; }
+
+  .final-title { font-size: 1.6rem; }
+  .final-card { padding: 1.5rem 1rem; }
+}

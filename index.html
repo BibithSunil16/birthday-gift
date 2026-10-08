@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎉 Happy Birthday!</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ========================================
+       PAGE 1 — Countdown & Reveal
+       ======================================== -->
+  <section class="page active" id="page-1">
+    <div class="countdown-container" id="countdown-container">
+      <div class="countdown-number" id="countdown-number">3</div>
+    </div>
+    <div class="reveal-text" id="reveal-text">
+      <h1>🎉 SURPRISE! 🎉</h1>
+      <p>A special gift is waiting just for you...</p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 2 — Yes or No (Runaway Button)
+       ======================================== -->
+  <section class="page" id="page-2">
+    <div class="page-center">
+      <h1 class="page-2-question" id="page-2-question">
+        So... ready for your surprise? 🎁
+      </h1>
+      <div class="yes-no-buttons">
+        <button class="btn-yes" id="btn-yes">YES! 😍</button>
+        <button class="btn-no" id="btn-no">No 😅</button>
+      </div>
+      <p class="runaway-message" id="runaway-message"></p>
+      <p class="runaway-counter" id="runaway-counter"></p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 3 — Happy Birthday!
+       ======================================== -->
+  <section class="page" id="page-3">
+    <div class="birthday-bg"></div>
+    <div class="page-center">
+      <h1 class="birthday-title">
+        🎂 Happy Birthday<br />
+        <span id="friend-name">Shreya</span>! 🎉
+      </h1>
+      <p class="birthday-subtitle">
+        The world is a better place because you're in it.<br />
+        Today is YOUR day! 🥳
+      </p>
+      <p class="birthday-joke">
+        (You're not getting older, you're just upgrading your version. 📱)
+      </p>
+      <button class="btn-next" onclick="showPage(4)">Next →</button>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 4 — Best Moments Gallery (8 photos)
+       ======================================== -->
+  <section class="page" id="page-4">
+    <h2 class="section-title">📸 The Main Character 💫</h2>
+    <p class="section-desc">Some of my favorite moments with you...</p>
+    <div class="carousel-container">
+      <div class="carousel-image-wrapper">
+        <img class="carousel-img" id="carousel-img-4" src="" alt="" />
+        <button class="carousel-arrow carousel-arrow-left" onclick="carouselPrev(4)">◀</button>
+        <button class="carousel-arrow carousel-arrow-right" onclick="carouselNext(4)">▶</button>
+        <span class="carousel-counter-overlay" id="carousel-counter-4">1 / 7</span>
+      </div>
+      <p class="carousel-caption" id="carousel-caption-4"></p>
+    </div>
+    <div class="page-nav">
+      <button class="btn-next" onclick="showPage(5)">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 5 — Puzzle Game
+       ======================================== -->
+  <section class="page" id="page-5">
+    <h2 class="section-title">🧩 Can You Fix This? 🤔</h2>
+    <p class="section-desc">Solve the puzzle to continue...</p>
+    <div class="puzzle-container" id="puzzle-container">
+      <p class="puzzle-counter" id="puzzle-counter">Puzzle 1 of 4 🧩</p>
+      <div class="puzzle-board" id="puzzle-board"></div>
+      <button class="btn-next" id="puzzle-complete-btn" style="display:none;" onclick="showPage(5.5)">You Did It! 🎉</button>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 5.5 — Between Message
+       ======================================== -->
+  <section class="page" id="page-5-5">
+    <div class="page-center">
+      <h1 class="message-title">You know Me 💫</h1>
+      <p class="message-text">
+        Now for my favorite part...<br />
+        the FUNNIEST photos of you 😂<br />
+        Brace yourself! 🤪
+      </p>
+      <button class="btn-next" onclick="showPage(6)" style="margin-top:2rem;">Show Me 🤣</button>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 6 — More Moments Carousel (7 photos)
+       ======================================== -->
+  <section class="page" id="page-6">
+    <h2 class="section-title">😂 The Funny Outtakes</h2>
+    <p class="section-desc">Pure comedy gold, no filter needed...</p>
+    <div class="carousel-container">
+      <div class="carousel-image-wrapper">
+        <img class="carousel-img" id="carousel-img-6" src="" alt="" />
+        <button class="carousel-arrow carousel-arrow-left" onclick="carouselPrev(6)">◀</button>
+        <button class="carousel-arrow carousel-arrow-right" onclick="carouselNext(6)">▶</button>
+        <span class="carousel-counter-overlay" id="carousel-counter-6">1 / 8</span>
+      </div>
+      <p class="carousel-caption" id="carousel-caption-6"></p>
+    </div>
+    <div class="page-nav">
+      <button class="btn-next" onclick="showPage(7)">Continue →</button>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 7 — Final Message
+       ======================================== -->
+  <section class="page" id="page-7">
+    <div class="final-bg"></div>
+    <div class="page-center">
+      <div class="final-card">
+        <h1 class="final-title">❤️ Happy Birthday! ❤️</h1>
+        <p class="final-message" id="final-message">
+          You're not just a friend — you're family.<br />
+          Thank you for all the laughter, the memories,<br />
+          and for being you.<br /><br />
+          Here's to many more years of friendship! 🥂
+        </p>
+        <p class="final-signoff">
+          With lots of love,<br />
+          <span id="your-name">Bibith</span> 💕
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       LIGHTBOX (shared)
+       ======================================== -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="" />
+  </div>
+
+  <!-- ========================================
+       CONFETTI CANVAS (overlay)
+       ======================================== -->
+  <canvas id="confetti-canvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
