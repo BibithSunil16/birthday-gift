@@ -4,6 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>🎉 Happy Birthday!</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -48,12 +51,12 @@
         🎂 Happy Birthday<br />
         <span id="friend-name">Shreya</span>! 🎉
       </h1>
-      <p class="birthday-subtitle">
-        The world is a better place because you're in it.<br />
+      <p class="birthday-subtitle" id="birthday-message">
+        Hey deluluuu may your dreams Becomes trueluluuuuuu.<br />
         Today is YOUR day! 🥳
       </p>
-      <p class="birthday-joke">
-        (You're not getting older, you're just upgrading your version. 📱)
+      <p class="birthday-joke" id="birthday-joke">
+        (You're getting older, but staying the same height. )
       </p>
       <button class="btn-next" onclick="showPage(4)">Next →</button>
     </div>
@@ -87,6 +90,7 @@
     <p class="section-desc">Solve the puzzle to continue...</p>
     <div class="puzzle-container" id="puzzle-container">
       <p class="puzzle-counter" id="puzzle-counter">Puzzle 1 of 4 🧩</p>
+      <p class="puzzle-caption" id="puzzle-caption"></p>
       <div class="puzzle-board" id="puzzle-board"></div>
       <button class="btn-next" id="puzzle-complete-btn" style="display:none;" onclick="showPage(5.5)">You Did It! 🎉</button>
     </div>
@@ -128,15 +132,27 @@
   </section>
 
   <!-- ========================================
-       PAGE 7 — Final Message
+       PAGE 7 — Message from a Friend
        ======================================== -->
   <section class="page" id="page-7">
+    <div class="page-center">
+      <div class="letter-card" id="letter-card">
+        <!-- Filled by JS with message content -->
+      </div>
+      <button class="btn-next" onclick="showPage(9)" style="margin-top:1.5rem;">Next →</button>
+    </div>
+  </section>
+
+  <!-- ========================================
+       PAGE 9 — Final Message
+       ======================================== -->
+  <section class="page" id="page-9">
     <div class="final-bg"></div>
     <div class="page-center">
       <div class="final-card">
         <h1 class="final-title">❤️ Happy Birthday! ❤️</h1>
         <p class="final-message" id="final-message">
-          You're not just a friend — you're family.<br />
+          You're not just a friend — you're Bishssss.<br />
           Thank you for all the laughter, the memories,<br />
           and for being you.<br /><br />
           Here's to many more years of friendship! 🥂
@@ -162,6 +178,6 @@
        ======================================== -->
   <canvas id="confetti-canvas"></canvas>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>

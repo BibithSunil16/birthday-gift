@@ -25,19 +25,19 @@ const CONFIG = {
   ],
 
   // Page 3 — Birthday
-  birthdayMessage: "The world is a better place because you're in it.",
-  birthdayJoke: "(You're not getting older, you're just upgrading your version. 📱)",
+  birthdayMessage: "Hey deluluuu may your dreams Becomes trueluluuuuuu.",
+  birthdayJoke: "(You're getting older, but staying the same height. )",
 
   // Page 4 — Best Moments Gallery (main photos: 7)
   // Photos live in the "main photos/" folder
   bestMoments: [
-    { src: "main photos/1000173100.jpg", caption: "The star of the show!", emoji: "🌟", date: "Iconic" },
-    { src: "main photos/1000173102.jpg", caption: "You being you", emoji: "✨", date: "Iconic" },
-    { src: "main photos/IMG_20230818_135522.jpg", caption: "Looking good!", emoji: "😌", date: "Good Vibes" },
-    { src: "main photos/IMG_20250531_171347012.jpg", caption: "Golden moment", emoji: "☀️", date: "Memories" },
-    { src: "main photos/IMG-20251024-WA0026.jpg", caption: "Our favorite person", emoji: "🥰", date: "Besties" },
-    { src: "main photos/IMG-20260310-WA0050.jpg", caption: "A whole mood", emoji: "🔥", date: "Unstoppable" },
-    { src: "main photos/IMG-20260503-WA0094.jpg", caption: "Forever grateful for you", emoji: "❤️", date: "Grateful" }
+    { src: "main photos/1000173100.jpg", caption: "The Office Gang!", emoji: "🌟", date: "Iconic" },
+    { src: "main photos/1000173102.jpg", caption: "The unofficial 'FRIEND'", emoji: "✨", date: "Iconic" },
+    { src: "main photos/IMG_20230818_135522.jpg", caption: "The trioooo!", emoji: "😌", date: "Good Vibes" },
+    { src: "main photos/IMG_20250531_171347012.jpg", caption: "The main character energy !", emoji: "☀️", date: "Memories" },
+    { src: "main photos/IMG-20251024-WA0026.jpg", caption: "The Alcholic", emoji: "🥰", date: "Besties" },
+    { src: "main photos/IMG-20260310-WA0050.jpg", caption: "The Hands", emoji: "🔥", date: "Unstoppable" },
+    { src: "main photos/IMG-20260503-WA0094.jpg", caption: "Prada Energy is real guys....", emoji: "❤️", date: "Grateful" }
   ],
 
   // Page 5 — Quiz (5 questions)
@@ -72,29 +72,60 @@ const CONFIG = {
   // Page 5 — Puzzle photos (all 4, cycled as levels)
   // Photos live in the "puzzle photos/" folder
   puzzlePhotos: [
-    { src: "puzzle photos/1000173101.jpg", caption: "Piece it together!" },
-    { src: "puzzle photos/1000173103.jpg", caption: "Almost there..." },
-    { src: "puzzle photos/IMG_20250720_163949962.jpg", caption: "Keep going!" },
-    { src: "puzzle photos/Shreyaa photos 032.jpg", caption: "Final piece!" }
+    { src: "puzzle photos/1000173101.jpg", caption: "Fix the gang up....!" },
+    { src: "puzzle photos/1000173103.jpg", caption: "Fix the Friend'SHIP'..." },
+    { src: "puzzle photos/IMG_20250720_163949962.jpg", caption: "The BOYFRIEND" },
+    { src: "puzzle photos/Shreyaa photos 032.jpg", caption: "Chinese BISHSSS!" }
   ],
 
   // Page 6 — Funny Photos (8 photos)
   // Photos live in the "funny photos/" folder
   funnyPhotos: [
-    { src: "funny photos/IMG_20130929_144023_0.jpg", caption: "Blast from the past 😂" },
-    { src: "funny photos/IMG_20130929_150317_0.jpg", caption: "Old-school goofiness" },
-    { src: "funny photos/IMG_20131116_072441_0.jpg", caption: "The chaos begins" },
-    { src: "funny photos/IMG_20141001_094426228.jpg", caption: "Peak silliness" },
-    { src: "funny photos/IMG_20151024_150138483.jpg", caption: "Can't stop laughing" },
-    { src: "funny photos/IMG-20251101-WA0002.jpg", caption: "This one's a classic 🤣" },
-    { src: "funny photos/Screenshot_20260828-225532 (1) (1) (1).png", caption: "Caught in 4K 📸" },
+    { src: "funny photos/IMG_20130929_144023_0.jpg", caption: "Kashmiri Gurl 😂" },
+    { src: "funny photos/IMG_20130929_150317_0.jpg", caption: "Jurassic Bark" },
+    { src: "funny photos/IMG_20131116_072441_0.jpg", caption: "Ms. Kushmitha" },
+    { src: "funny photos/IMG_20141001_094426228.jpg", caption: "Mr and Mrs PUG" },
+    { src: "funny photos/IMG_20151024_150138483.jpg", caption: "Go Green" },
+    { src: "funny photos/IMG-20251101-WA0002.jpg", caption: "Assthecthic🤣" },
     { src: "funny photos/Screenshot_20260912-140817 (1).png", caption: "Certified meme moment" }
   ],
 
-  // Page 7 — Final Message
-  finalMessage: "You're not just a friend — you're family.\nThank you for all the laughter, the memories,\nand for being you.\n\nHere's to many more years of friendship! 🥂"
+  // Page 7 — Message letter (from msg file)
+  messageLetter: "Happy birthday Shreya ⛄\n\nHence I am super shy to record a video i decided to add a message to you from myself.\n\nFirst off all Happiest birthday to you ❤️. Second of all thank you for being a huge part in our life, and we are always greatful to have you as a bestfriend and for tan as a gf. I know we three are far from eachother but still close together. And Our group \"The Walking Red Flags\" has become an important part in my life nowadays, the way I wait to get a call from you guys 😭. Shareing details about each of your life's and teas of what happening around has become an habit for me to listen. Ik it's a msg about you but u guys are my parents ( tan as father and Shreya as mom lol). \nI was really planning to come and suprise you for this bday and but my life had a different plan and here I am sitting in the office and writing/typing on my second day of joining and we just got off a call, I miss you guys so much that I don't know what to say other than keep missing you guys 😭. But one thing I will proudly say is that a friend like you is always need for person like me and dude I am really grateful to have you as my bestfriend. I am really sad I am not able to come there and suprise youuu\n\nAlso a thing okay, finding a gift for is more than impossible, it's more likely humanly and ai-ily not possible, sooo I made this website from scratch (support from ai and tan) as a gift from me bestfriend and ur Bf/bestfriend tano\n(Lol my manager just came and asked to work as both soc and noc dieing in pain current life is going in a \"raa position\" if you want to know what raa is \"click here\")",
+  clickHereText: "click here",
+
+  // Sticker reveal
+  stickerSrc: "sticker/STK-20260908-WA0004.webp",
+
+  // Page 9 — Final Message
+  finalMessage: "You're not just a friend — you're Bishssss.\nThank you for all the laughter, the memories,\nand for being you.\n\nHere's to many more years of friendship! 🥂"
 };
 /* ========== END CONFIG ========== */
+
+/* =============================================
+   STICKER FILES (from attachments zip)
+   ============================================= */
+var STICKER_FILES = [
+  "stickers/STK-20250303-WA0005.webp",
+  "stickers/STK-20250303-WA0009.webp",
+  "stickers/STK-20250303-WA0010.webp",
+  "stickers/STK-20250303-WA0014.webp",
+  "stickers/STK-20250303-WA0017.webp",
+  "stickers/STK-20250303-WA0018.webp",
+  "stickers/STK-20250303-WA0027.webp",
+  "stickers/STK-20250303-WA0028.webp",
+  "stickers/STK-20250605-WA0005.webp",
+  "stickers/STK-20250720-WA0044.webp",
+  "stickers/STK-20250720-WA0045.webp",
+  "stickers/STK-20250724-WA0034.webp",
+  "stickers/STK-20250724-WA0037.webp",
+  "stickers/STK-20250724-WA0040.webp",
+  "stickers/STK-20250724-WA0042.webp",
+  "stickers/STK-20251101-WA0005.webp",
+  "stickers/STK-20251101-WA0006.webp",
+  "stickers/STK-20260421-WA0056.webp",
+  "stickers/STK-20260504-WA0237.webp"
+];
 
 
 
@@ -119,7 +150,8 @@ function showPage(num) {
   if (num === 4) initGallery();
   if (num === 5) initQuiz();
   if (num === 6) initCollage();
-  if (num === 7) initFinalPage();
+  if (num === 7) initMessagePage();
+  if (num === 9) initFinalPage();
 }
 
 
@@ -214,28 +246,98 @@ function initBirthdayPage() {
   var nameEl = document.getElementById('friend-name');
   if (nameEl) nameEl.textContent = CONFIG.friendName;
 
+  var msgEl = document.getElementById('birthday-message');
+  if (msgEl) msgEl.innerHTML = CONFIG.birthdayMessage + '<br />Today is YOUR day! 🥳';
+
+  var jokeEl = document.getElementById('birthday-joke');
+  if (jokeEl) jokeEl.textContent = CONFIG.birthdayJoke;
+
   if (birthdayInitialized) return;
   birthdayInitialized = true;
 
   var container = document.getElementById('page-3');
-  var emojis = ['🎈', '🎉', '🎊', '⭐', '✨', '🌟', '💫', '🎁', '💖', '🌸', '🎀', '🎵'];
 
-  emojis.forEach(function(emoji, i) {
-    var el = document.createElement('div');
+  // Pick 12 random stickers to float around (replacing emojis)
+  var shuffled = STICKER_FILES.slice();
+  for (var i = shuffled.length - 1; i > 0; i--) {
+    var k = Math.floor(Math.random() * (i + 1));
+    var tmp = shuffled[i];
+    shuffled[i] = shuffled[k];
+    shuffled[k] = tmp;
+  }
+  var selected = shuffled.slice(0, 12);
+
+  selected.forEach(function(src, i) {
+    var el = document.createElement('img');
     el.className = 'float-item';
-    el.textContent = emoji;
+    el.src = src;
+    el.alt = '';
     el.style.left = (Math.random() * 90 + 5) + '%';
     el.style.top = (Math.random() * 90 + 5) + '%';
-    el.style.fontSize = (Math.random() * 1.5 + 1.5) + 'rem';
+    var size = Math.random() * 60 + 100;
+    el.style.width = size + 'px';
+    el.style.height = 'auto';
     el.style.animationDelay = (i * 0.5) + 's';
     el.style.animationDuration = (Math.random() * 4 + 4) + 's';
     container.appendChild(el);
   });
 
   if (window.triggerConfetti) window.triggerConfetti();
+
+  // Start random jumpscares after a short delay
+  setTimeout(setupJumpscares, 2000);
 }
 
 
+
+/* =============================================
+   RANDOM JUMBSCARE STICKER POPUPS
+   ============================================= */
+var jumpscareTimer = null;
+var jumpscareActive = false;
+
+function setupJumpscares() {
+  if (jumpscareTimer) {
+    clearTimeout(jumpscareTimer);
+    jumpscareTimer = null;
+  }
+  // Fire first one quickly so user can test
+  jumpscareTimer = setTimeout(triggerJumpscare, 1000);
+}
+
+function scheduleNextJumpscare() {
+  var delay = Math.random() * 10000 + 20000; // 20-30 seconds
+  jumpscareTimer = setTimeout(triggerJumpscare, delay);
+}
+
+function triggerJumpscare() {
+  if (jumpscareActive) return;
+  jumpscareActive = true;
+
+  try {
+    var src = STICKER_FILES[Math.floor(Math.random() * STICKER_FILES.length)];
+
+    // Create jumpscare element on-the-fly (no dependency on HTML/CSS)
+    var div = document.createElement('div');
+    div.style.cssText = 'position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.25);z-index:10000;pointer-events:none;';
+
+    var img = document.createElement('img');
+    img.style.cssText = 'max-width:500px;max-height:500px;';
+    img.src = src;
+
+    div.appendChild(img);
+    document.body.appendChild(div);
+
+    setTimeout(function() {
+      if (div.parentNode) document.body.removeChild(div);
+      jumpscareActive = false;
+      scheduleNextJumpscare();
+    }, 1200);
+  } catch(e) {
+    jumpscareActive = false;
+    scheduleNextJumpscare();
+  }
+}
 
 /* =============================================
    PAGE 4 — CAROUSEL (Best Moments)
@@ -360,6 +462,11 @@ function renderPuzzle() {
   board.innerHTML = '';
 
   var photoSrc = puzzleState.photos[puzzleState.photoIndex].src;
+  var photoCaption = puzzleState.photos[puzzleState.photoIndex].caption || '';
+
+  // Show caption
+  var captionEl = document.getElementById('puzzle-caption');
+  if (captionEl) captionEl.textContent = photoCaption;
 
   // Map each grid slot -> the piece currently sitting in it
   var slotForPosition = [];
@@ -464,7 +571,40 @@ function initCollage() {
 
 
 /* =============================================
-   PAGE 7 — FINAL MESSAGE
+   PAGE 7 — MESSAGE LETTER
+   ============================================= */
+var messagePageInitialized = false;
+
+function initMessagePage() {
+  if (messagePageInitialized) return;
+  messagePageInitialized = true;
+
+  var card = document.getElementById('letter-card');
+  if (!card) return;
+
+  var text = CONFIG.messageLetter;
+  // Replace "click here" with a clickable span
+  var clickKeyword = CONFIG.clickHereText;
+  var idx = text.indexOf(clickKeyword);
+  if (idx !== -1) {
+    var before = text.substring(0, idx);
+    var after = text.substring(idx + clickKeyword.length);
+    text = before + '<span class="click-here-link" onclick="revealSticker()">' + clickKeyword + '</span>' + after;
+  }
+
+  var p = document.createElement('p');
+  p.className = 'letter-text';
+  p.innerHTML = text;
+  card.appendChild(p);
+}
+
+/* Sticker reveal */
+function revealSticker() {
+  openLightbox(CONFIG.stickerSrc, 'Surprise! 😄');
+}
+
+/* =============================================
+   PAGE 9 — FINAL MESSAGE
    ============================================= */
 function initFinalPage() {
   var msgEl = document.getElementById('final-message');
